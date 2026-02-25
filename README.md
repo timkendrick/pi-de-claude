@@ -24,8 +24,6 @@ pi install github.com/lukebarton/pi-de-claude
 
 <img width="2036" height="822" alt="62003" src="https://github.com/user-attachments/assets/567df5b2-1425-4728-9238-9314d9a866b6" />
 
-<img width="2198" height="1490" alt="89160" src="https://github.com/user-attachments/assets/c9392bbe-cd2f-4334-b174-d653dec7d630" />
-
 ## Using pi-de-claude
 1. **Connect:** Run the `/ide` command inside pi. Choose the IDE you want if more than one is detected.
 2. **Use it:**
@@ -53,3 +51,5 @@ LLMs are still LLMs will forget to call the IDE tools. You can improve your chan
 - Unarchiving the JetBrains plugin to see how it uses the API - though the JB plugin is using an older (but mostly compatible) protocol version.
   - nb. The VS Code plugin is obfuscated by minification.
 - [How Claude Code IDE Extensions Actually Work](https://github.com/coder/claudecode.nvim/blob/main/PROTOCOL.md) is a useful reference.
+
+<img width="2198" height="1490" alt="89160" src="https://github.com/user-attachments/assets/c9392bbe-cd2f-4334-b174-d653dec7d630" />
