@@ -34,9 +34,9 @@ pi install github.com/lukebarton/pi-de-claude
 LLMs are still LLMs will forget to call the IDE tools. You can improve your chances by asking for it directly (for example, "use `openDiff` to show the changes"). You can see the list of available tools by running `/ide` and reviewing the tool descriptions.
 
 ## Issues
-- cc plugin at-mentions don't get sent to pi
-  - JetBrains: No workaround - the cc plugin sends at-mentions directly to the self-managed console, rather than over the Websocket API
-  - VS Code: `"claudeCode.useTerminal": true` forces them over the WebSocket API
+- cc plugin at-mentions open cc within the IDE
+  - JetBrains: No workaround - the cc plugin always sends at-mentions directly to the self-managed cc terminal, rather than over the Websocket API
+  - VS Code: `"claudeCode.useTerminal": true` will force the VSCode plugin to send at-mentions over the WebSocket API instead of trying to open a CC pane within VSCode
 
 ## The future and commentary
 - I'm happy to maintain this extension in the face of API changes, but the IDE plugins are maintained by Anthropic, and they don't seem to get much love. Who knows what Anthropic has in mind for the future of these plugins.
