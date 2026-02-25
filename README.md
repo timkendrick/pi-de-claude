@@ -22,9 +22,12 @@ pi install github.com/lukebarton/pi-de-claude
     - [Claude Code for JetBrains](https://plugins.jetbrains.com/plugin/27310-claude-code-beta-)
     - [claudecode.nvim](https://github.com/coder/claudecode.nvim)
 
+<img width="2036" height="822" alt="62003" src="https://github.com/user-attachments/assets/567df5b2-1425-4728-9238-9314d9a866b6" />
+
+
 ## Using pi-de-claude
-1**Connect:** Run the `/ide` command inside pi. Choose the IDE you want if more than one is detected.
-2**Profit**
+1. **Connect:** Run the `/ide` command inside pi. Choose the IDE you want if more than one is detected.
+2. **Use it:**
    - When pi suggests edits, it will present a diff inside your IDE for approval.
    - Highlight code in your IDE to give pi immediate context for your next request.
 
