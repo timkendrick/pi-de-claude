@@ -1,6 +1,6 @@
 # pi-de-claude
 
-pi-de-claude connects the pi coding agent to any IDE running the Claude Code plugin-including VS Code, Neovim, IntelliJ IDEA, and other JetBrains IDEs. It lets the LLM interact with your IDE for operations like diff view/approval and lets you reference code from your IDE in your conversations with pi.
+IDE integration for pi with any IDE running a Claude Code plugin-including VS Code, Neovim, IntelliJ IDEA, and other JetBrains IDEs. It lets the LLM interact with your IDE for operations like diff view/approval and lets you reference code from your IDE in your conversations with pi.
 
 <img width="2012" height="266" alt="89481" src="https://github.com/user-attachments/assets/eea1fc66-544b-41e2-9d29-234522399220" />
 
