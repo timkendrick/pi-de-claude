@@ -19,6 +19,7 @@ import { Type } from "@sinclair/typebox";
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import { homedir } from "node:os";
 import { join } from "node:path";
+import { env } from "node:process";
 import {BeforeAgentStartEventResult} from "@mariozechner/pi-coding-agent/dist/core/extensions";
 
 // ── Types ──────────────────────────────────────────────────────────────────
@@ -98,6 +99,7 @@ interface IdeAgentToolResult<T = IdeToolDetails> extends AgentToolResult<T> {
 const IDE_LOCK_DIR = join(homedir(), ".claude", "ide");
 const STATUS_KEY = "pi-de-claude";
 const WIDGET_KEY = "ide-selection";
+const USE_DIFF_EDITOR = env.PI_DE_CLAUDE_USE_DIFF_EDITOR !== "false";
 
 // ── Tool Descriptors ───────────────────────────────────────────────────────
 
@@ -647,7 +649,7 @@ export default function (pi: ExtensionAPI) {
 		}
 
 		// b) IDE-connected system prompt addition
-		if (connectedIde) {
+		if (connectedIde && USE_DIFF_EDITOR) {
 			const addition = `\n\nYou are connected to the user's IDE (${connectedIde.ideName}). When making file edits, prefer using the ide_openDiff tool instead of the built-in edit/write tools. This lets the user review your proposed changes as a diff in their IDE before accepting. The tool blocks until the user accepts or rejects. If they reject, ask what they'd like changed.`;
 			result.systemPrompt = event.systemPrompt + addition;
 		}

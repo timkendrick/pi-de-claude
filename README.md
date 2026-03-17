@@ -30,6 +30,15 @@ pi install github.com/lukebarton/pi-de-claude
    - When pi suggests edits, it will present a diff inside your IDE for approval.
    - Highlight code in your IDE to give pi immediate context for your next request.
 
+## Configuration
+
+### Default edit tool
+By default, all file edits will be made using the IDE diff tool. Set the following environment variable to default to the standard `edit` tool instead:
+
+```sh
+PI_DE_CLAUDE_USE_DIFF_EDITOR=false
+```
+
 ### A quick note about ever fallible LLMs
 LLMs are still LLMs will forget to call the IDE tools. You can improve your chances by asking for it directly (for example, "use `openDiff` to show the changes"). You can see the list of available tools by running `/ide` and reviewing the tool descriptions.
 
